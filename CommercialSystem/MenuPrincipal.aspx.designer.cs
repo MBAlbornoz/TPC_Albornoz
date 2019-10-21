@@ -10,6 +10,6 @@
 namespace CommercialSystem {
     
     
-    public partial class _Default {
+    public partial class MenuPrincipal {
     }
 }

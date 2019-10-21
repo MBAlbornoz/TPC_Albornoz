@@ -71,3 +71,7 @@ C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\obj\Debug\Commer
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\obj\Debug\CommercialSystem.csproj.CopyComplete
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\obj\Debug\CommercialSystem.dll
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\obj\Debug\CommercialSystem.pdb
+C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\EntityFramework.dll
+C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\EntityFramework.SqlServer.dll
+C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\EntityFramework.xml
+C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\EntityFramework.SqlServer.xml
