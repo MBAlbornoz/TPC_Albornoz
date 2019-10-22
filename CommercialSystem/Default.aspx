@@ -15,6 +15,7 @@
         background: antiquewhite;
     }
     </style>
+
   <form>
   <div class="form-group row">
     <label for="inputUser" class="col-sm-2 col-form-label">Usuario</label>

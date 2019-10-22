@@ -34,7 +34,7 @@
             text-decoration: none; /*SIN SUBRAYADO EL ENLACE*/
         }
         .menu li a:hover{
-            color: #954dc1; /*color en el menu al desplazarme */
+            color: #f395f1; /*color en el menu al desplazarme */
             transition: all .2s; /*tarda 0,3 segundos en mostrarse el cambio*/
             border:  1px solid #808080;
         }
@@ -66,23 +66,30 @@
 
     <nav class="navbar">
        <ul class="menu">
-         <li><a href="#">Menu 1</a>
+         <li><a href="#">Menu</a>
          <ul class="submenu">
-            <li><a href="#" class="">Submenu 1</a></li>
-            <li><a href="#" class="">Submenu 2</a></li>
+            <li><a href="#" class="">Gestion Vendedores</a></li>
+            <li><a href="PageCliente.aspx" class="">Gestion Clientes</a></li>
+              <li><a href="#" class="">Gestion Proveedores</a></li>
+            <li><a href="#" class="">Gestion Productos</a></li>
+              <li><a href="#" class="">Gestion Ventas</a></li>
+            <li><a href="#" class="">Gestion Compras</a></li>
             <li><a href="Default.aspx" class="">Salir</a></li>
         </ul>
          </li>
-        <li><a href="#">Menu 2</a></li>
-        <li><a href="#">Menu 3</a>
+        <li><a href="#">Facturacion</a>
+            <ul class="submenu">
+                <li><a href="#" class="">Ingresar Factura</a></li>
+                <li><a href="#" class="">Ultima Factura</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Busqueda</a>
         <ul class="submenu">
-            <li><a href="#" class="">Submenu 1</a></li>
-            <li><a href="#" class="">Submenu 2</a></li>
+            <li><a href="#" class="">Busqueda Productos</a></li>
+            <li><a href="#" class="">Busqueda Clientes</a></li>
         </ul>
     </li>
-    <li><a href="#">Menu 4</a></li>
-    <li><a href="#">Menu 5</a></li>
-    <li><a href="#">Menu 6</a></li>
+    <li><a href="#">Ayuda</a></li>
  
 </ul> <!-- end .menu -->
     </nav>
