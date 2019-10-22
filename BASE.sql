@@ -15,6 +15,28 @@ CREATE TABLE Personas
 	tipo varchar(50) not null --Puede ser Vendedor, Supervisor, Administrador, Proveedor
 )
 GO
+CREATE TABLE Vendedores(
+	id int not null primary key identity(1,1),
+)
+
+GO
+
+CREATE TABLE Clientes(
+	id int not null primary key identity(1,1),
+	fechaNacimiento Date not null,
+	fechaRegistro Datetime not null
+)
+GO
+
+CREATE TABLE Empresa(
+	id int not null primary key identity(1,1),
+	razonSocial varchar(100) not null unique,
+)
+GO
+CREATE TABLE Proveedores(
+	id int not null primary key identity(1,1),
+)
+GO
 CREATE TABLE Telefonos
 (
 	id int not null foreign key references Personas(id),
@@ -26,7 +48,7 @@ GO
 CREATE TABLE Emails
 (
 	id int not null primary key foreign key references Personas(id),
-	email varchar(100) null unique
+	email varchar(100) null unique 
 )
 
 /*
@@ -50,6 +72,29 @@ CREATE TABLE Ciudades
 )
 */
 GO
+
+        
+CREATE TABLE Marcas(
+	id int not null primary key identity(1,1),
+	nombre varchar(100) not null unique
+)
+GO       
+CREATE TABLE Productos(
+	codigo varchar(100) not null,
+	nombre varchar(100) not null,
+	imagen varchar(200) not null,
+	idMarca int not null foreign key references Marcas(id),
+	primary key(codigo,idMarca)
+)
+GO
+
+CREATE TABLE Stock(
+	codigoProduct varchar(100) not null foreign key references Productos(codigo),
+	minimo int not null,
+	maximo int null,
+	primary key(codigoProduct)	
+)
+GO
 CREATE TABLE Direcciones(
 	id int not null primary key foreign key references Personas(id),
 	direccion varchar(200) null,
@@ -57,6 +102,74 @@ CREATE TABLE Direcciones(
 	departamento int null,
 	ciudad varchar(100) null,
 	provincia varchar(100) null,
-	pais varchar(100) null,
+	pais varchar(100) null
 	--idCiudad int null foreign key references Ciudades(id)
 )
+
+GO
+CREATE TABLE DetalleVentas(
+		id int not null,     --PUEDE EXISTIR MAS DE UNA VENTA
+		idCodigoFactura int not null,
+		idProducto int not null foreign key references Productos(codigo),
+		codigoFactura int not null,
+		precioU money not null,
+		cantidad int not null, --CREAR CHECK MAYOR CERO
+		total money not null,
+		subtotal money not null,
+		iva float null
+		)
+GO
+CREATE TABLE Tipo_Factura(
+	id int not null primary key identity(1,1),
+	tipo varchar(50) not null
+)
+GO
+CREATE TABLE  MedioPago(
+	id int not null primary key identity (1,1),
+	medio varchar(100) not null
+)
+
+
+GO
+        
+CREATE TABLE DetalleCompras(
+	id int not null,
+	codigoProducto varchar(100) not null foreign key references Productos(codigo), 
+	codigoFactura int not null,
+	precioU money not null,
+	cantidad int not null, --CREAR CHECK MAYOR CERO
+	total money not null,
+	subtotal money not null,
+	iva float null
+	
+)
+GO
+CREATE TABLE Compras(
+	codigo int not null primary key identity(1,1),
+	idTipoFactura int not null foreign key references Tipo_Factura(id),
+	idMedioPago int not null foreign key references MedioPago(id),
+	idEmpresa int not null foreign key references Empresa(id),
+	idProveedor int not null foreign key references Proveedores(id),
+	fecha datetime not null,
+	total money not null,
+	subtotal money not null,
+	nota varchar(100) null,
+	idDetalleCompra int not null foreign key references DetalleCompras(id)
+)
+
+GO
+CREATE TABLE Facturacion(
+	codigo int not null primary key identity(1,1),
+	idTipoFactura int not null foreign key references Tipo_Factura(id),
+	idMedioPago int not null foreign key references MedioPago(id),
+	idCliente int not null foreign key references Clientes(id),
+	idVendedor int not null foreign key references Vendedores(id),
+	fecha DateTime not null,
+	total money not null,
+	subtotal money not null,
+	nota varchar(100) null,
+	idVenta int not null foreign key references DetalleVentas(id),
+	CHECK(sutotal>0),
+	CHECK(total>0)
+)
+
