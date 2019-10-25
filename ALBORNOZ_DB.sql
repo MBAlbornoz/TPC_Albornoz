@@ -15,6 +15,7 @@ CREATE TABLE Personas
 	tipo varchar(50) not null --Puede ser Vendedor, Supervisor, Administrador, Proveedor
 )
 GO
+<<<<<<< HEAD
 CREATE TABLE Usuarios
 (
 	   id int not null primary key,
@@ -28,6 +29,10 @@ CREATE TABLE Vendedores(
 	fRegistro Datetime not null,
 	sexo char null,
 	idUsuario int null foreign key references Usuarios(id),
+=======
+CREATE TABLE Vendedores(
+	id int not null primary key identity(1,1),
+>>>>>>> 3c4af9d893f4c94ffdf262e32365029d17eec74c
 )
 
 GO
@@ -102,6 +107,29 @@ CREATE TABLE Stock(
 	primary key(codigoProduct)	
 )
 GO
+
+        
+CREATE TABLE Marcas(
+	id int not null primary key identity(1,1),
+	nombre varchar(100) not null unique
+)
+GO       
+CREATE TABLE Productos(
+	codigo varchar(100) not null,
+	nombre varchar(100) not null,
+	imagen varchar(200) not null,
+	idMarca int not null foreign key references Marcas(id),
+	primary key(codigo,idMarca)
+)
+GO
+
+CREATE TABLE Stock(
+	codigoProduct varchar(100) not null foreign key references Productos(codigo),
+	minimo int not null,
+	maximo int null,
+	primary key(codigoProduct)	
+)
+GO
 CREATE TABLE Direcciones(
 	id int not null primary key foreign key references Personas(id),
 	direccion varchar(200) null,
@@ -117,7 +145,11 @@ GO
 CREATE TABLE DetalleVentas(
 		id int not null,     --PUEDE EXISTIR MAS DE UNA VENTA
 		idCodigoFactura int not null,
+<<<<<<< HEAD
 		idProducto varchar(100) not null foreign key references Productos(codigo),
+=======
+		idProducto int not null foreign key references Productos(codigo),
+>>>>>>> 3c4af9d893f4c94ffdf262e32365029d17eec74c
 		codigoFactura int not null,
 		precioU money not null,
 		cantidad int not null, --CREAR CHECK MAYOR CERO
@@ -135,7 +167,14 @@ CREATE TABLE  MedioPago(
 	id int not null primary key identity (1,1),
 	medio varchar(100) not null
 )
+<<<<<<< HEAD
 GO        
+=======
+
+
+GO
+        
+>>>>>>> 3c4af9d893f4c94ffdf262e32365029d17eec74c
 CREATE TABLE DetalleCompras(
 	id int not null,
 	codigoProducto varchar(100) not null foreign key references Productos(codigo), 
@@ -145,6 +184,10 @@ CREATE TABLE DetalleCompras(
 	total money not null,
 	subtotal money not null,
 	iva float null
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 3c4af9d893f4c94ffdf262e32365029d17eec74c
 )
 GO
 CREATE TABLE Compras(
@@ -157,7 +200,11 @@ CREATE TABLE Compras(
 	total money not null,
 	subtotal money not null,
 	nota varchar(100) null,
+<<<<<<< HEAD
 	idDetalleCompra int not null
+=======
+	idDetalleCompra int not null foreign key references DetalleCompras(id)
+>>>>>>> 3c4af9d893f4c94ffdf262e32365029d17eec74c
 )
 
 GO
@@ -171,8 +218,13 @@ CREATE TABLE Facturacion(
 	total money not null,
 	subtotal money not null,
 	nota varchar(100) null,
+<<<<<<< HEAD
 	idVenta int not null,
 	CHECK(subtotal>0),
+=======
+	idVenta int not null foreign key references DetalleVentas(id),
+	CHECK(sutotal>0),
+>>>>>>> 3c4af9d893f4c94ffdf262e32365029d17eec74c
 	CHECK(total>0)
 )
 
