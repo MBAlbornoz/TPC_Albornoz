@@ -133,6 +133,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Imagenes\AddUser.png" />
     <Content Include="Imagenes\Cancel.png" />
     <Content Include="Imagenes\Delete.png" />
     <Content Include="Imagenes\Edit.png" />
@@ -140,6 +141,7 @@
     <Content Include="Imagenes\New.png" />
     <Content Include="Imagenes\Print.png" />
     <Content Include="Imagenes\SaveAsPDF.png" />
+    <Content Include="Imagenes\User.png" />
     <Content Include="MenuPrincipal.aspx" />
     <Content Include="PageCliente.aspx" />
     <Content Include="Scripts\bootstrap.js" />

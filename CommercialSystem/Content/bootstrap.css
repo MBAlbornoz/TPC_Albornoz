@@ -118,8 +118,7 @@ optgroup,
 select,
 textarea {
   color: inherit;
-  font: inherit;
-  margin: 0;
+  margin: 0 0 0 16px;
 }
 button {
   overflow: visible;
@@ -4245,12 +4244,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
-@media (min-width: 768px) {
+@media (min-width: 100%) {
   .navbar {
     border-radius: 4px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 100%) {
   .navbar-header {
     float: left;
   }
