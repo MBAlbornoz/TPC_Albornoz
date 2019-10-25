@@ -50,6 +50,8 @@ C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\roslyn\VBCSC
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\Antlr3.Runtime.dll
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\AspNet.ScriptManager.bootstrap.dll
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\EntityFramework.dll
+C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\EntityFramework.SqlServer.dll
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\Microsoft.AspNet.FriendlyUrls.dll
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
@@ -59,6 +61,8 @@ C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\Microsoft.We
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\Newtonsoft.Json.dll
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\System.Web.Optimization.dll
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\WebGrease.dll
+C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\EntityFramework.xml
+C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\EntityFramework.SqlServer.xml
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\System.Web.Optimization.xml
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\Newtonsoft.Json.xml
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\Antlr3.Runtime.pdb
@@ -71,7 +75,3 @@ C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\obj\Debug\Commer
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\obj\Debug\CommercialSystem.csproj.CopyComplete
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\obj\Debug\CommercialSystem.dll
 C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\obj\Debug\CommercialSystem.pdb
-C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\EntityFramework.dll
-C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\EntityFramework.SqlServer.dll
-C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\EntityFramework.xml
-C:\Users\Maga.PC-376\source\repos\TPC_Albornoz\CommercialSystem\bin\EntityFramework.SqlServer.xml
